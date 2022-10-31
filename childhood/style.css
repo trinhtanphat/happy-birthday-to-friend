@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: cursive;
+    color: #fff;
+}
+.back{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background:url(img/back.jpg);
+    background-size: cover;
+    z-index: -100;
+}
+.area{
+    font-size: 135px;
+    font-weight: bold;
+}
+.one{
+    padding-left: 2%;
+}
+.name{
+    color: yellow;
+    font-size: 100px;
+    padding-right: 25%;
+    text-align: right;
+    margin-bottom: 150px;
+}
+.det{
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding: 10%;
+}
+.imgarea{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 150px;
+}
+.img{
+    width: 50%;
+    margin-top: 80px;
+}
+img{
+    width: 80%;
+}
+.right{
+    margin-left: 50%;
+}
+.scrolldown {
+    text-align: center;
+    font-size: 50px;
+}

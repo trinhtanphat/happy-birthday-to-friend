@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>About Lien</title>
+    
+</head>
+<body>
+    <div class="back"></div>
+    <div class="container">
+        <h1>Video about Lien xinh gai</h1>
+        <div id="video_player">
+            <video controls poster="./img/sn1.png" class="video" id="video">
+                <source src="./video/12.mp4" type="video/mp4">
+                <source src="./video/6.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="scrollBox">  
+            <div class="box">
+                <img src="./img/3.png">
+                <div class="box-content">
+                    <h3>🥰</h3>
+                    <a href="./video/3.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/4.png">
+                <div class="box-content">
+                    <h3>😍</h3>
+                    <a href="./video/4.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/5.png">
+                <div class="box-content">
+                    <h3>😉</h3>
+                    <a href="./video/5.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/6.png">
+                <div class="box-content">
+                    <h3>😤</h3>
+                    <a href="./video/6.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/7.png">
+                <div class="box-content">
+                    <h3>😘</h3>
+                    <a href="./video/7.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/8.png">
+                <div class="box-content">
+                    <h3> 🙄 </h3>
+                    <a href="./video/8.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/9.png">
+                <div class="box-content">
+                    <h3>😳</h3>
+                    <a href="./video/9.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/10.png">
+                <div class="box-content">
+                    <h3>👻</h3>
+                    <a href="./video/10.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./img/11.png">
+                <div class="box-content">
+                    <h3>👾</h3>
+                    <a href="./video/11.mp4" class="btn">Watch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ###########################javascript for vidoe Player################ -->
+
+    <script type="text/javascript">
+        let anchors = document.querySelectorAll('div .btn');
+    let links = [...anchors];
+    
+    for (let i=0; i<links.length; i++) {
+        links[i].onclick = handler;
+    }
+    function handler(e) {
+        e.preventDefault();
+        let videotarget = this.getAttribute("href");
+        let filename = videotarget.substr(0, videotarget.lastIndexOf('.'));
+        let video = document.getElementById("video");
+        video.removeAttribute("poster");
+        let source = document.querySelectorAll("#video_player video source");
+        source[0].src = filename + ".mp4";
+        source[1].src = filename + ".m4v";
+        video.load();
+        video.play();
+    }
+    </script>
+</body>
+</html>
